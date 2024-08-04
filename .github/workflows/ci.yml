@@ -5,7 +5,10 @@ on:
       - main
 jobs:
   example:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
       - name: Setup example
@@ -24,5 +27,6 @@ jobs:
           working-directory: example
       - name: Show hugo version
         run: |
+          ls -l demo/public
           type hugo
           hugo version
