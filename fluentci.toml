@@ -1,0 +1,11 @@
+[package]
+name = "hugo"
+version = "0.1.0"
+description = "CI/CD Plugin for Hugo"
+license = "MIT"
+keywords = [
+  "hugo"
+]
+authors = [
+  "Tsiry Sandratraina <tsiry.sndr@fluentci.io>"
+]
