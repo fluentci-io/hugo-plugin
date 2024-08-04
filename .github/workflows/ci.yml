@@ -25,6 +25,8 @@ jobs:
           args: |
             build -s ../demo -d ../demo/public
           working-directory: example
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Show hugo version
         run: |
           ls -l demo/public
