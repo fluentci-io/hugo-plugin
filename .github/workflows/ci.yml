@@ -17,6 +17,7 @@ jobs:
           cp -r src example/.fluentci
           cp Cargo.toml example/.fluentci
           cp Cargo.lock example/.fluentci
+          git submodule update --init --recursive --remote
       - name: Setup Fluent CI CLI
         uses: fluentci-io/setup-fluentci@v5
         with:
