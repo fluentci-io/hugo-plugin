@@ -1,5 +1,6 @@
 # Hugo Plugin
 
+[![fluentci pipeline](https://shield.fluentci.io/x/hugo)](https://pkg.fluentci.io/hugo)
 [![ci](https://github.com/fluentci-io/hugo-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/fluentci-io/hugo-plugin/actions/workflows/ci.yml)
 
 This plugin sets up your CI/CD pipeline with a specific version of [Hugo](https://gohugo.io/).

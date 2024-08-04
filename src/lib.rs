@@ -20,6 +20,12 @@ pub fn setup(version: String) -> FnResult<String> {
 
 #[plugin_fn]
 pub fn build(args: String) -> FnResult<String> {
+    let version = dag().get_env("HUGO_VERSION")?;
+
+    if version.is_empty() {
+        dag().set_envs(vec![("HUGO_VERSION".into(), "0.131.0".into())])?;
+    }
+
     setup_hugo()?;
     let stdout = dag()
         .pipeline("build")?
